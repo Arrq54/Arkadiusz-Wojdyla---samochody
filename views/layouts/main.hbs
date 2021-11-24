@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    {{{body}}}
+
+</body>
+<script>
+    function confirmDelete(id){
+        if(confirm('Czy na pewno chcesz usunac?')==false){
+            
+            document.getElementById(`${id}`).href = ""
+        }else{
+            document.getElementById(`${id}`).href = `/deleteCar?id=${id}`
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "arkadiusz-wojdyla-samochody",
+  "version": "1.0.0",
+  "description": "Arkadiusz Wojdyla - projekt samochody",
+  "main": "server03.js",
+  "dependencies": {
+    "express-handlebars": "^5.3.3",
+    "express": "^4.17.1",
+    "nedb": "^1.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Arkadiusz Wojdyla",
+  "license": "ISC"
+}

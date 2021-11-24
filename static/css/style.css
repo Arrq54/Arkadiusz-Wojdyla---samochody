@@ -1,0 +1,55 @@
+h3 {
+  color: rgb(119, 119, 119);
+  text-decoration: underline;
+}
+td,
+th {
+  border: 1px solid black;
+  padding: 5px;
+  text-align: center;
+  min-width: 20px;
+}
+#add {
+  border: 1px solid blue;
+  border-radius: 10px;
+  padding: 3px;
+  color: blue;
+  margin-top: 25px;
+  cursor: pointer;
+}
+th {
+  color: blue;
+}
+.label {
+  color: blue;
+}
+.form {
+  display: flex;
+  justify-content: space-around;
+}
+#car {
+  height: 40px;
+}
+button {
+  cursor: pointer;
+}
+.deleted:visited {
+  color: red;
+}
+.delete {
+  color: red;
+  border: 1px solid red;
+  padding: 3px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.edit {
+  color: blue;
+  font-weight: bold;
+  background-color: white;
+  border: 1px solid blue;
+  border-radius: 10px;
+}
+select {
+  width: 75px;
+}

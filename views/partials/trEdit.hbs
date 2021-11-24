@@ -1,0 +1,45 @@
+{{#if edit}}
+<td>{{@index}}</td>
+<td>
+    <select name="ubezpieczony">
+        <option value="TAK">TAK</option>
+        <option value="NIE">NIE</option>
+        <option value="BRAK DANYCH">BRAK DANYCH</option>
+    </select>
+</td>
+<td>
+    <select name="benzyna">
+        <option value="TAK">TAK</option>
+        <option value="NIE">NIE</option>
+        <option value="BRAK DANYCH">BRAK DANYCH</option>
+    </select>
+</td>
+<td>
+    <select name="uszkodzony">
+        <option value="TAK">TAK</option>
+        <option value="NIE">NIE</option>
+        <option value="BRAK DANYCH">BRAK DANYCH</option>
+    </select>
+</td>
+<td>
+    <select name="naped4x4">
+        <option value="TAK">TAK</option>
+        <option value="NIE">NIE</option>
+        <option value="BRAK DANYCH">BRAK DANYCH</option>
+    </select>
+</td>
+<td>
+    <button type="submit"  name="update" value={{_id}} formaction="/updateCar" class="update">UPDATE</button>
+</td>
+<td>
+    <button type="submit" class="edit" name="cancel" value={{_id}} formaction="/cancelCar">CANCEL</button>
+</td>
+{{else}}
+<td>{{@index}}</td>
+<td>{{ubezpieczony}}</td>
+<td>{{benzyna}}</td>
+<td>{{uszkodzony}}</td>
+<td>{{naped4x4}}</td>
+ <td><button type="submit" name="id" value={{_id}} class="delete" formaction="/deleteCar" onclick="return confirm('czy usunąć?')">DELETE</button></td>
+ <td><button type="submit" name="id" value={{_id}} class="edit" formaction="/editCar">EDIT</button></td>
+{{/if}}

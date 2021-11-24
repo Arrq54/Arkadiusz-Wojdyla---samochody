@@ -1,0 +1,48 @@
+<h1>02: zapis/odczyt w bazie NEDB</h1>
+
+
+<div class="form">
+    <div class="add">
+    <h3>Dane pojazdu</h3>
+        <form action="/addCar" method="get">
+            <table>
+                <tr>
+                    <td class="label">Ubezpieczony:</td>
+                    <td><input type="checkbox" name="ubezpieczony" id=""></td>
+                </tr>
+                <tr>
+                    <td class="label">Benzyna:</td>
+                    <td><input type="checkbox" name="benzyna" id=""></td>
+                </tr>
+                <tr>
+                    <td class="label">Uszkodzony:</td>
+                    <td><input type="checkbox" name="uszkodzony" id=""></td>
+                </tr>
+                <tr>
+                    <td class="label">Napęd 4x4:</td>
+                    <td><input type="checkbox" name="naped4x4" id=""></td>
+                </tr>
+            </table>
+            <button type="submit" id="add">DODAJ DO BAZY</button>
+        </form>
+    </div>
+    <div class="dataBase">
+        <h3>Wszystie pojazdy:</h3>
+    <table>
+            <form method="get">
+                <th></th>
+                <th>ubezpieczony</th>
+                <th>benzyna</th>
+                <th>uszkodzony</th>
+                <th>naped4x4</th>
+                <th></th>
+                {{#each items}}
+                <tr id="car">{{> tr}}</tr>
+                {{/each}}
+            </form>    
+        </table>
+    </div>
+
+
+    
+</div>
