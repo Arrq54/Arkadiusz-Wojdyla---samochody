@@ -47,7 +47,6 @@ app.get('/editCar', function(req,res){
                 coll1.update({_id: docs[i]._id},{$set: docs[i]},{},function(err,numReplaced){});
             }
         });
-       
         coll1.update({ _id: req.query.id }, { $set: doc }, {}, function (err, numUpdated) {});
         coll1.find({}, function (err, docs) {
             context.items = docs
@@ -78,17 +77,23 @@ app.get('/cancelCar',function(req,res){
 })
 })
 
-
 app.set('views', path.join(__dirname, 'views'));         // ustalamy katalog views
 app.engine('hbs', hbs({
     defaultLayout: 'main.hbs',
     extname: '.hbs',
     partialsDir: "views/partials",
+    helpers: {         
+        isEditing: function (items) {
+            for(let i=0;i<context.items.length; i++){
+                if(context.items[i].edit==true){
+                    return "<h3>Wszystkie pojazdy - <br>edycja: </h3>";
+                }
+            }
+            return "<h3>Wszystkie pojazdy - </h3>" 
+        },
+    }
 }));
 app.set('view engine', 'hbs');
-
-
-
 app.use(express.static('static'))
 app.listen(PORT, function () {
     console.log("start serwera na porcie " + PORT)

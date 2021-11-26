@@ -53,3 +53,10 @@ button {
 select {
   width: 75px;
 }
+.update {
+  color: magenta;
+  font-weight: bold;
+  background-color: white;
+  border: 1px solid magenta;
+  border-radius: 10px;
+}
